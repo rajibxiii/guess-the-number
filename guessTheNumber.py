@@ -29,10 +29,10 @@ while attempts > 0:
         elif guess <= number-10:
           print ("Too low.")
 
-        if attempts == 1: break
-
         print (f"Guess again.\nYou have {attempts-1} attempts remaining.")
  
     attempts -= 1
 
-print ("You've run out of guesses, you lose.")
+    if (attempts == 0):
+        print ("You've run out of guesses, you lose.")
+        print (f"The correct answer was {number}")
